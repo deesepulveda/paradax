@@ -1,0 +1,433 @@
+/*=========================================================
+===========================================================
+
+PROJECT: PARADAX - PARADISE & PARALLAX 2021
+
+NOTES: LANDING PAGE PROJECT USING HTML5, CSS3, JAVASCRIPT
+
+WEBSITE: N/A
+
+===========================================================
+=========================================================*/
+
+/********** RESETS **********/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /*Equivalent to 10px*/
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/********** CONTAINER **********/
+
+.container {
+  width: 100%;
+  height: 900rem;
+  position: relative;
+}
+
+.container::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background: linear-gradient(to top, black, blue, red);
+}
+
+/********** TITLE IMG **********/
+
+.title {
+  width: 80%;
+  height: auto;
+  position: fixed;
+  z-index: 10;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transition: 1s ease-in;
+  -webkit-transition: 1s ease-in;
+  -moz-transition: 1s ease-in;
+  -ms-transition: 1s ease-in;
+  -o-transition: 1s ease-in;
+}
+
+.title-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/** JAVASCRIPT EVENT **/
+
+.titleGrow {
+  opacity: 0;
+  transform: scale(5);
+  -webkit-transform: scale(5);
+  -moz-transform: scale(5);
+  -ms-transform: scale(5);
+  -o-transform: scale(5);
+}
+
+/********** TRIANGLE BOX IMG **********/
+
+.triangleBox {
+  width: 100vw;
+  height: 100%;
+  /* height: 0; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  transition: 2s ease;
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -ms-transition: 2s ease;
+  -o-transition: 2s ease;
+}
+
+.triangle {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/** JAVASCRIPT EVENT **/
+
+.triangleGrow {
+  transform: scale(12);
+  -webkit-transform: scale(12);
+  -moz-transform: scale(12);
+  -ms-transform: scale(12);
+  -o-transform: scale(12);
+}
+
+/* .triangleGone {
+  opacity: 0;
+} */
+
+/********** PALM TREES IMG **********/
+
+.palmTrees {
+  width: 200%;
+  height: 100%;
+  /* height: 0; */
+  z-index: 6;
+  position: relative;
+  position: fixed;
+  top: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transition: 2s ease;
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -ms-transition: 2s ease;
+  -o-transition: 2s ease;
+}
+
+.trees1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -10%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.trees2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/********** WAVES BOX IMG **********/
+
+.waveBox {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.waves {
+  width: 150%;
+  height: auto;
+  object-fit: contain;
+  position: absolute;
+  left: -2%;
+  filter: drop-shadow(-0.5rem -0.5rem 0.2rem #0a0a0a70);
+  -webkit-filter: drop-shadow(-0.5rem -0.5rem 0.2rem #0a0a0a70);
+}
+
+#waveOne {
+  top: 63%;
+}
+
+#waveTwo {
+  top: 67%;
+}
+
+#waveThree {
+  top: 71%;
+}
+
+#waveFour {
+  top: 75%;
+}
+
+#waveFive {
+  top: 79%;
+}
+
+#waveSix {
+  top: 83%;
+}
+
+#waveSeven {
+  top: 87%;
+}
+
+#waveEight {
+  top: 91%;
+}
+
+#waveNine {
+  top: 95%;
+}
+
+/** JAVASCRIPT EVENT **/
+
+.wavesFlow {
+  animation: wavesMove 3s linear infinite;
+  -webkit-animation: wavesMove 3s linear infinite;
+}
+
+.wavesSideToSide {
+  animation: wavesSide 3s linear infinite;
+  -webkit-animation: wavesSide 3s linear infinite;
+}
+
+/** KEYFRAMES FOR WAVES **/
+
+@keyframes wavesSide {
+  0% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-2%);
+    -webkit-transform: translateX(-2%);
+    -moz-transform: translateX(-2%);
+    -ms-transform: translateX(-2%);
+    -o-transform: translateX(-2%);
+  }
+
+  50% {
+    transform: translateX(1%);
+    -webkit-transform: translateX(1%);
+    -moz-transform: translateX(1%);
+    -ms-transform: translateX(1%);
+    -o-transform: translateX(1%);
+  }
+
+  75% {
+    transform: translateX(-1%);
+    -webkit-transform: translateX(-1%);
+    -moz-transform: translateX(-1%);
+    -ms-transform: translateX(-1%);
+    -o-transform: translateX(-1%);
+  }
+}
+
+/*  */
+
+@keyframes wavesMove {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(1%);
+    -webkit-transform: translateY(1%);
+    -moz-transform: translateY(1%);
+    -ms-transform: translateY(1%);
+    -o-transform: translateY(1%);
+  }
+
+  50% {
+    transform: translateY(-1%);
+    -webkit-transform: translateY(-1%);
+    -moz-transform: translateY(-1%);
+    -ms-transform: translateY(-1%);
+    -o-transform: translateY(-1%);
+  }
+
+  75% {
+    transform: translateY(1%);
+    -webkit-transform: translateY(1%);
+    -moz-transform: translateY(1%);
+    -ms-transform: translateY(1%);
+    -o-transform: translateY(1%);
+  }
+}
+
+/********** MOUNTAINS IMG **********/
+
+.mountains {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 2s linear;
+  -webkit-transition: 2s linear;
+  -moz-transition: 2s linear;
+  -ms-transition: 2s linear;
+  -o-transition: 2s linear;
+}
+
+.mountOne {
+  width: 180%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  /* left: -30%; */
+  left: -50%;
+  object-fit: contain;
+  z-index: 7;
+  z-index: 1;
+  filter: drop-shadow(-0.5rem -0.5rem 1rem #0a0a0a);
+  -webkit-filter: drop-shadow(-0.5rem -0.5rem 1rem #0a0a0a);
+}
+
+.mountTwo {
+  width: 150%;
+  height: 60%;
+  position: absolute;
+  top: 16%;
+  /* left: -55%; */
+  left: -5%;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(-0.5rem -0.5rem 1rem #0a0a0a);
+  -webkit-filter: drop-shadow(-0.5rem -0.5rem 1rem #0a0a0a);
+}
+
+.mountThree {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 13%;
+  /* left: 25%; */
+  left: -3%;
+  object-fit: contain;
+  object-position: center;
+  z-index: 3;
+  filter: drop-shadow(-0.5rem -0.5rem 1rem #0a0a0a);
+  -webkit-filter: drop-shadow(-0.5rem -0.5rem 1rem #0a0a0a);
+}
+
+/********** SUN BOX IMG **********/
+
+.sunBox {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: drop-shadow(0rem 0rem 4rem #e9e508);
+  -webkit-filter: drop-shadow(0rem 0rem 4rem #e9e508);
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.sun {
+  width: 30%;
+  height: auto;
+}
+
+/** JAVASCRIPT EVENT **/
+
+.sunSet {
+  opacity: 0;
+}
+
+/********** MOON BOX IMG **********/
+
+.moonBox {
+  width: 100vw;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: -7%;
+  left: 50%;
+  z-index: -1;
+  filter: drop-shadow(0rem 0rem 4rem #17daec);
+  -webkit-filter: drop-shadow(0rem 0rem 4rem #17daec);
+  transition: 3s ease;
+  -webkit-transition: 3s ease;
+  -moz-transition: 3s ease;
+  -ms-transition: 3s ease;
+  -o-transition: 3s ease;
+}
+
+.moon {
+  width: 30%;
+  height: auto;
+}
+
+/** JAVASCRIPT EVENT **/
+
+.moonGrow {
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
